@@ -1,6 +1,6 @@
 {
   "name": "frontend",
-  "proxy": "http://localhost:8000",
+  "proxy": "https://relieved-tiara-ant.cyclic.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
