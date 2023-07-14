@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Store } from '../Store';
 import { toast } from 'react-toastify';
-import { getError } from '../utils';
+import { baseURL, getError } from '../utils';
 import { Link, useNavigate } from 'react-router-dom';
 import LoadingBox from '../components/LoadingBox';
 import Axios from 'axios';
@@ -45,7 +45,7 @@ export default function PlaceOrderScreen() {
       dispatch({ type: 'CREATE_REQUEST' });
 
       const { data } = await Axios.post(
-        '/api/orders',
+        baseURL + '/api/orders',
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,

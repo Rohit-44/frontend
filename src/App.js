@@ -30,7 +30,7 @@ import OrderScreen from './Screens/OrderScreen';
 import OrderHistoryScreen from './Screens/OrderHistoryScreen';
 import ProfileScreen from './Screens/ProfileScreen';
 import Button from 'react-bootstrap/Button';
-import { getError } from './utils';
+import { baseURL, getError } from './utils';
 import axios from 'axios';
 import SearchBox from './components/SearchBox';
 function App() {
@@ -51,7 +51,7 @@ function App() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`/api/products/categories`);
+        const { data } = await axios.get(baseURL + `/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err));

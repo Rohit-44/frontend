@@ -3,3 +3,5 @@ export const getError = (error) => {
     ? error.response.data.message
     : error.message;
 };
+
+export const baseURL = 'https://relieved-tiara-ant.cyclic.app'; // Replace with your backend's hosted URL
